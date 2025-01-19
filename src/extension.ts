@@ -36,7 +36,7 @@ function setActivity(details: string, state: string, startTimestamp?: number) {
   const activity: rpc.Presence = {
     details: processString(details, availableVariables),
     state: processString(state, availableVariables),
-    largeImageKey: "https://github.com/kubamus/rpcDiscord/raw/main/assets/vscode.png",
+    largeImageKey: "https://github.com/kubamus/RPCDiscord/raw/main/assets/vscode.png",
     startTimestamp: startTimestamp ? startTimestamp : undefined,
     largeImageText: "Visual Studio Code",
     instance: false,
