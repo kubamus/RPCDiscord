@@ -1,6 +1,6 @@
-# rpcDiscord
+# RPCDiscord
 
-rpcDiscord is a customizable Visual Studio Code extension for Discord Rich Presence. It allows you to display detailed information about your current coding session on your Discord profile.
+RPCDiscord is a customizable Visual Studio Code extension for Discord Rich Presence. It allows you to display detailed information about your current coding session on your Discord profile.
 
 ## Features
 
@@ -26,6 +26,13 @@ You can use the following variables in your rich presence templates:
    - `rpcDiscord.details`: Customize the details section of the rich presence.
    - `rpcDiscord.state`: Customize the state section of the rich presence.
    - `rpcDiscord.show_time`: Toggle to show the time in the rich presence.
+   - `rpcDiscord.client_id`: Provide your Discord application client ID.
+
+## Getting Your Discord Application Client ID
+Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+Click on "New Application" and create a new application.
+Copy the "Client ID" from the application settings.
+Paste the Client ID into the rpcDiscord.client_id setting in your VS Code settings.
 
 ## Example Configuration
 
@@ -33,6 +40,7 @@ You can use the following variables in your rich presence templates:
 {
   "rpcDiscord.details": "Editing {file_name}{file_extension}",
   "rpcDiscord.state": "This file has {total_lines} lines",
-  "rpcDiscord.show_time": true
+  "rpcDiscord.show_time": true,
+  "rpcDiscord.client_id": "YOUR_DISCORD_CLIENT_ID"
 }
 ```
