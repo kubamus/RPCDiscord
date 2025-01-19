@@ -1,14 +1,26 @@
 {
   "name": "rpcdiscord",
   "displayName": "rpcDiscord",
-  "description": "",
+  "description": "An extension to display your current activity in Discord",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.96.0"
   },
+  "license": "GPL-3.0-only",
   "publisher": "musielskikuba",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kubamus/RPCDiscord"
+  },
   "categories": [
     "Other"
+  ],
+  "keywords": [
+    "discord",
+    "rpc",
+    "rich presence",
+    "activity",
+    "status"
   ],
   "activationEvents": [
     "*"
