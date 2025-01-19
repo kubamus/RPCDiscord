@@ -10,7 +10,7 @@
     "url": "https://github.com/kubamus/RPCDiscord/issues"
   },
   "homepage": "https://github.com/kubamus/RPCDiscord/blob/main/README.md",
-  "icon": "./assets/icon.jpg",
+  "icon": "assets/icon.jpg",
   "galleryBanner": {
     "color": "#000000",
     "theme": "dark"
