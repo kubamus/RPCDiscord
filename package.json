@@ -1,0 +1,78 @@
+{
+  "name": "rpcDiscord",
+  "displayName": "rpcDiscord",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rpcDiscord.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "configuration": {
+      "title": "rpcDiscord",
+      "properties": {
+        "rpcDiscord.details": {
+          "type": "string",
+          "default": "Editing {file_name}{file_extension}",
+          "description": "You can use variables like {file_name} or {total_lines}"
+        },
+        "rpcDiscord.state": {
+          "type": "string",
+          "default": "This file has {total_lines} lines",
+          "description": "You can use variables like {file_name} or {total_lines}"
+        },
+        "rpcDiscord.show_time": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the time"
+        },
+        "rpcDiscord.client_id": {
+          "type": "string",
+          "default": "",
+          "description": "Your Discord application client ID. Check the README for more information."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/discord-rpc": "^4.0.8",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.16.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1"
+  }
+}
