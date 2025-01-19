@@ -2,7 +2,7 @@
   "name": "rpcdiscord",
   "displayName": "rpcDiscord",
   "description": "An extension to display your current activity in Discord",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -36,7 +36,7 @@
     "status"
   ],
   "activationEvents": [
-    "*"
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -62,6 +62,16 @@
           "type": "string",
           "default": "",
           "description": "Your Discord application client ID. Check the README for more information."
+        },
+        "rpcDiscord.idle_details": {
+          "type": "string",
+          "default": "Idling",
+          "description": "Details when you are idle"
+        },
+        "rpcDiscord.idle_state": {
+          "type": "string",
+          "default": "Browsing files",
+          "description": "State when you are idle"
         }
       }
     }

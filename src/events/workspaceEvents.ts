@@ -7,26 +7,21 @@ export function registerWorkspaceEvents(
   rpcClient: Client,
   startTimestamp?: number
 ) {
-  vscode.workspace.onDidChangeTextDocument(() => {
-    const { details, state } = getSettings();
-    setActivity(rpcClient, details, state, startTimestamp);
-  });
+  function updateActivity() {
+    const { details, state, idleDetails, idleState } = getSettings();
+    const activeEditor = vscode.window.activeTextEditor;
+    if (activeEditor !== undefined) {
+      setActivity(rpcClient, details, state, startTimestamp);
+    } else {
+      setActivity(rpcClient, idleDetails, idleState, startTimestamp);
+    }
+  }
 
-  vscode.workspace.onDidSaveTextDocument(() => {
-    const { details, state } = getSettings();
+  vscode.workspace.onDidChangeTextDocument(updateActivity);
+  vscode.workspace.onDidSaveTextDocument(updateActivity);
+  vscode.workspace.onDidCloseTextDocument(updateActivity);
+  vscode.workspace.onDidOpenTextDocument(updateActivity);
+  vscode.window.onDidChangeActiveTextEditor(updateActivity);
 
-    setActivity(rpcClient, details, state, startTimestamp);
-  });
-
-  vscode.workspace.onDidCloseTextDocument(() => {
-    const { details, state } = getSettings();
-
-    setActivity(rpcClient, details, state, startTimestamp);
-  });
-
-  vscode.workspace.onDidOpenTextDocument(() => {
-    const { details, state } = getSettings();
-
-    setActivity(rpcClient, details, state, startTimestamp);
-  });
+  updateActivity();
 }

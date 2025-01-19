@@ -5,6 +5,8 @@ export interface Settings {
   state: string;
   show_time: boolean;
   client_id: string | null;
+  idleDetails: string;
+  idleState: string;
 }
 
 export function getSettings(): Settings {
@@ -14,5 +16,7 @@ export function getSettings(): Settings {
     state: config.get("state") || "This file has {total_lines} lines",
     show_time: config.get("show_time") || true,
     client_id: config.get("client_id") || null,
+    idleDetails: config.get("idle_details") || "Idling",
+    idleState: config.get("idle_state") || "Browsing files",
   };
 }
