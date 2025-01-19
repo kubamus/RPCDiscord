@@ -2,6 +2,8 @@
 
 RPCDiscord is a customizable Visual Studio Code extension for Discord Rich Presence. It allows you to display detailed information about your current coding session on your Discord profile.
 
+![Screenshot](https://github.com/kubamus/RPCDiscord/raw/main/assets/screen.jpg)
+
 ## Features
 
 - Display the current file name, extension, path, workspace, line, column, and total lines in your Discord Rich Presence.
