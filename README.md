@@ -46,3 +46,15 @@ Paste the Client ID into the rpcDiscord.client_id setting in your VS Code settin
   "rpcDiscord.client_id": "YOUR_DISCORD_CLIENT_ID"
 }
 ```
+
+## Contributing
+
+We welcome contributions to RPCDiscord! If you have any suggestions, bug reports, or want to contribute code, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with clear and concise messages.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
+
+Thank you for your contributions!

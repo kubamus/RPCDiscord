@@ -2,9 +2,22 @@
   "name": "rpcdiscord",
   "displayName": "rpcDiscord",
   "description": "An extension to display your current activity in Discord",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.96.0"
+  },
+  "bugs": {
+    "url": "https://github.com/kubamus/RPCDiscord/issues"
+  },
+  "homepage": "https://github.com/kubamus/RPCDiscord/blob/main/README.md",
+  "icon": "./assets/icon.jpg",
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
+  "author": {
+    "name": "Kuba Musielski",
+    "email": "musielskikuba@gmail.com"
   },
   "license": "GPL-3.0-only",
   "publisher": "musielskikuba",
