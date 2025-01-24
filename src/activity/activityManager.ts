@@ -35,12 +35,16 @@ export function setActivity(
   const activity: rpc.Presence = {
     details: processString(details, variables),
     state: processString(state, variables),
-    largeImageKey: "https://github.com/kubamus/RPCDiscord/raw/main/assets/vscode.png",
     startTimestamp,
-    largeImageText: "Visual Studio Code",
     instance: false,
-    buttons: [{ label: "GitHub", url: "https://github.com/kubamus" }],
   };
 
-  rpcClient.setActivity(activity);
+  console.log(activity);
+
+  rpcClient.setActivity({
+    details: activity.details,
+    state: activity.state,
+    startTimestamp: activity.startTimestamp,
+    instance: activity.instance,
+  });
 }

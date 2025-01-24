@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 The summary of Semantic Versioning is in file [`VERSIONING.md`](./VERSIONING.md).
 
+## 1.0.3 - 24.01.2024
+### Fixed
+- Resolved an issue preventing the extension from functioning correctly due to an error when displaying images in presence.
+
 ## 1.0.2 - 19.01.2024
 ### Added
 - Feature to display "Idle" status when no file is being edited
