@@ -35,16 +35,28 @@ export function setActivity(
   const activity: rpc.Presence = {
     details: processString(details, variables),
     state: processString(state, variables),
+    largeImageKey: "https://github.com/kubamus/RPCDiscord/raw/main/assets/vscode.png",
+    largeImageText: "Visual Studio Code",
     startTimestamp,
     instance: false,
   };
 
-  console.log(activity);
-
-  rpcClient.setActivity({
-    details: activity.details,
-    state: activity.state,
-    startTimestamp: activity.startTimestamp,
-    instance: activity.instance,
-  });
+  try {
+    rpcClient.setActivity({
+      details: activity.details,
+      state: activity.state,
+      largeImageKey: activity.largeImageKey,
+      largeImageText: activity.largeImageText,
+      startTimestamp: activity.startTimestamp,
+      instance: activity.instance,
+    });
+  } catch {
+    console.log("error");
+    rpcClient.setActivity({
+      details: activity.details,
+      state: activity.state,
+      startTimestamp: activity.startTimestamp,
+      instance: activity.instance,
+    });
+  }
 }
